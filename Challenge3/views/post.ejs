@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<div><h1>Posts</h1><div>
+		<div>
+			<% var i = 0;%>			
+			<%results.forEach(function(poster){%>
+				<%var post = poster.toJSON()%>
+				<div><h1><%=++i%>&nbsp;<%=post.title%></h1></div>
+				<div><h3><%=post.post%></h3></div>
+			<%});%>
+			<form method="post" action="/post">
+				<div> 
+					<span>Title</span>
+					<input type="text" name="title"></input>
+				</div>
+				<div> 
+					<span>Post</span>
+					<textarea rows=4 columns=80 name="post"></textarea>
+				</div>
+				<input type ="submit" name="save" title="click"></input>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %> <%=name||''%></p>
+	<form method="POST" action="/users/info" id="myform">
+		<input type="text" id="name" name="firstName"/>
+		<input type="submit" text="click"/>
+	</form>
+  </body>
+</html>
